@@ -1,0 +1,390 @@
+/* ==========================================================================
+   MapLibre GL Layout Export — Plugin Styles
+   All classes prefixed with `mgl-le-` to avoid collisions.
+   ========================================================================== */
+
+/* Overlay */
+.mgl-le-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: rgba(30, 30, 40, 0.88);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+/* Toolbar */
+.mgl-le-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  color: rgba(255, 255, 255, 0.9);
+  flex-shrink: 0;
+  z-index: 10;
+  position: relative;
+}
+
+.mgl-le-toolbar-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #2dd4bf;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.mgl-le-toolbar-label {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.mgl-le-toolbar select,
+.mgl-le-toolbar button {
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 0.875rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  transition: all 0.3s;
+  pointer-events: auto;
+}
+
+.mgl-le-toolbar select option {
+  background: #1e1e28;
+}
+
+.mgl-le-toolbar select:hover,
+.mgl-le-toolbar button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.mgl-le-btn-primary {
+  background: rgba(20, 184, 166, 0.8) !important;
+  border-color: rgba(20, 184, 166, 0.5) !important;
+  color: #fff !important;
+  box-shadow: 0 0 15px rgba(20, 184, 166, 0.5);
+}
+
+.mgl-le-btn-primary:hover {
+  background: rgba(45, 212, 191, 0.9) !important;
+  border-color: rgba(45, 212, 191, 0.8) !important;
+}
+
+.mgl-le-btn-danger {
+  color: #f87171 !important;
+}
+
+.mgl-le-btn-danger:hover {
+  color: #fca5a5 !important;
+}
+
+.mgl-le-btn-close {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.mgl-le-btn-close:hover {
+  color: rgba(255, 255, 255, 1) !important;
+}
+
+.mgl-le-separator {
+  width: 1px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.1);
+  flex-shrink: 0;
+}
+
+.mgl-le-spacer {
+  flex: 1;
+}
+
+/* Paper area */
+.mgl-le-paper-area {
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.mgl-le-paper {
+  position: relative;
+  background: white;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.5);
+  transform-origin: center center;
+  overflow: hidden;
+}
+
+.mgl-le-paper-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* Element shared styles */
+.mgl-le-element {
+  position: absolute;
+  cursor: move;
+}
+
+.mgl-le-selected {
+  outline: 2px solid rgba(20, 184, 166, 0.8);
+  outline-offset: -1px;
+  box-shadow: 0 0 15px rgba(20, 184, 166, 0.3);
+}
+
+/* Resize handles */
+.mgl-le-resize-handle {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: rgba(20, 184, 166, 0.9);
+  border: 1px solid white;
+  border-radius: 50%;
+  z-index: 5;
+  box-shadow: 0 0 8px rgba(20, 184, 166, 0.5);
+}
+
+.mgl-le-resize-nw { top: -5px; left: -5px; cursor: nw-resize; }
+.mgl-le-resize-n  { top: -5px; left: 50%; margin-left: -5px; cursor: n-resize; }
+.mgl-le-resize-ne { top: -5px; right: -5px; cursor: ne-resize; }
+.mgl-le-resize-e  { top: 50%; margin-top: -5px; right: -5px; cursor: e-resize; }
+.mgl-le-resize-se { bottom: -5px; right: -5px; cursor: se-resize; }
+.mgl-le-resize-s  { bottom: -5px; left: 50%; margin-left: -5px; cursor: s-resize; }
+.mgl-le-resize-sw { bottom: -5px; left: -5px; cursor: sw-resize; }
+.mgl-le-resize-w  { top: 50%; margin-top: -5px; left: -5px; cursor: w-resize; }
+
+/* Map frame */
+.mgl-le-map-frame {
+  overflow: hidden;
+  border: 1px solid #ccc;
+}
+
+.mgl-le-focused {
+  outline: 3px solid rgba(20, 184, 166, 0.8);
+  outline-offset: -1px;
+  box-shadow: 0 0 20px rgba(20, 184, 166, 0.4);
+}
+
+.mgl-le-map-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  cursor: move;
+}
+
+.mgl-le-map-container {
+  position: absolute;
+  inset: 0;
+}
+
+.mgl-le-focus-indicator {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  padding: 2px 8px;
+  background: #2563eb;
+  color: white;
+  font-size: 11px;
+  border-radius: 4px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+/* Text element */
+.mgl-le-text-element {
+  padding: 4px;
+  min-height: 24px;
+  overflow: hidden;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.mgl-le-editing {
+  cursor: text;
+  outline: 1px dashed rgba(20, 184, 166, 0.8);
+}
+
+.mgl-le-text-element [contenteditable] {
+  outline: none;
+  width: 100%;
+  height: 100%;
+}
+
+/* Tiptap editor styles */
+.mgl-le-text-element .tiptap,
+.mgl-le-text-element .ProseMirror {
+  outline: none;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.mgl-le-text-element .ProseMirror p {
+  margin: 0;
+  padding: 0;
+}
+
+.mgl-le-text-element .ProseMirror p + p {
+  margin-top: 0.25em;
+}
+
+/* Text style panel */
+.mgl-le-text-style-panel {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  z-index: 10010;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.mgl-le-text-style-panel select,
+.mgl-le-text-style-panel input,
+.mgl-le-text-style-panel button {
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 0.75rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.9);
+  cursor: pointer;
+  pointer-events: auto;
+  transition: color 0.2s, background 0.2s;
+}
+
+.mgl-le-text-style-panel select option {
+  background: #1e1e28;
+}
+
+.mgl-le-text-style-panel select:hover,
+.mgl-le-text-style-panel button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.mgl-le-text-style-panel button.mgl-le-active {
+  background: rgba(20, 184, 166, 0.2);
+  border-color: rgba(20, 184, 166, 0.5);
+  color: #5eead4;
+}
+
+.mgl-le-text-style-panel input[type="color"] {
+  width: 28px;
+  height: 28px;
+  padding: 2px;
+  cursor: pointer;
+}
+
+/* Lock button */
+.mgl-le-lock-btn {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  width: 22px;
+  height: 22px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: auto;
+}
+
+.mgl-le-element:hover .mgl-le-lock-btn,
+.mgl-le-locked .mgl-le-lock-btn {
+  opacity: 1;
+}
+
+.mgl-le-lock-btn:hover {
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.mgl-le-locked {
+  cursor: default;
+  outline-color: #888 !important;
+}
+
+/* Print media query */
+@media print {
+  .mgl-le-overlay {
+    background: white !important;
+    backdrop-filter: none !important;
+  }
+
+  .mgl-le-toolbar,
+  .mgl-le-text-style-panel,
+  .mgl-le-resize-handle,
+  .mgl-le-lock-btn,
+  .mgl-le-map-overlay {
+    display: none !important;
+  }
+
+  .mgl-le-paper-area {
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+
+  .mgl-le-paper {
+    box-shadow: none !important;
+    transform: none !important;
+  }
+
+  .mgl-le-selected {
+    outline: none !important;
+  }
+
+  .mgl-le-map-frame {
+    outline: none !important;
+  }
+}
+
+/* IControl trigger button */
+.mgl-le-trigger-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  border-radius: 4px;
+}
+
+.mgl-le-trigger-btn:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.mgl-le-trigger-btn svg {
+  display: block;
+}

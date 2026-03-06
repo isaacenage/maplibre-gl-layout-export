@@ -1,0 +1,19 @@
+node_modules/
+dist/
+*.tsbuildinfo
+
+# Original pre-conversion files (kept locally for reference)
+/PrintImageElement.tsx
+/PrintLayoutView.tsx
+/PrintMapFrame.tsx
+/PrintPaper.tsx
+/PrintTextElement.tsx
+/PrintTextStylePanel.tsx
+/PrintToolbar.tsx
+/print-layout.css
+/printCapture.ts
+/printLayout.types.ts
+/tiptapFontSize.ts
+/useDuplicateMap.ts
+/usePrintDrag.ts
+/usePrintResize.ts

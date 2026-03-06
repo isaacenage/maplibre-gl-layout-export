@@ -1,0 +1,91 @@
+{
+  "name": "@isaacenage/maplibre-gl-layout-export",
+  "version": "0.1.0",
+  "description": "A powerful print layout and export plugin for MapLibre GL JS — drag-and-drop map frames, rich text, images, and export to PNG/PDF/SVG.",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": [
+    "*.css"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "peerDependencies": {
+    "maplibre-gl": ">=3.0.0",
+    "react": ">=18.0.0",
+    "react-dom": ">=18.0.0",
+    "@tiptap/react": ">=2.0.0",
+    "@tiptap/starter-kit": ">=2.0.0",
+    "@tiptap/extension-text-style": ">=2.0.0",
+    "@tiptap/extension-font-family": ">=2.0.0",
+    "@tiptap/extension-color": ">=2.0.0",
+    "@tiptap/extension-text-align": ">=2.0.0",
+    "@tiptap/extension-underline": ">=2.0.0",
+    "@tiptap/extension-highlight": ">=2.0.0"
+  },
+  "peerDependenciesMeta": {
+    "@tiptap/react": { "optional": false },
+    "@tiptap/starter-kit": { "optional": false },
+    "@tiptap/extension-text-style": { "optional": false },
+    "@tiptap/extension-font-family": { "optional": false },
+    "@tiptap/extension-color": { "optional": false },
+    "@tiptap/extension-text-align": { "optional": false },
+    "@tiptap/extension-underline": { "optional": false },
+    "@tiptap/extension-highlight": { "optional": false }
+  },
+  "dependencies": {
+    "html2canvas": "^1.4.1",
+    "jspdf": "^2.5.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "maplibre-gl": "^4.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@tiptap/react": "^2.1.0",
+    "@tiptap/starter-kit": "^2.1.0",
+    "@tiptap/extension-text-style": "^2.1.0",
+    "@tiptap/extension-font-family": "^2.1.0",
+    "@tiptap/extension-color": "^2.1.0",
+    "@tiptap/extension-text-align": "^2.1.0",
+    "@tiptap/extension-underline": "^2.1.0",
+    "@tiptap/extension-highlight": "^2.1.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.3.0"
+  },
+  "keywords": [
+    "maplibre",
+    "maplibre-gl",
+    "print",
+    "export",
+    "pdf",
+    "png",
+    "svg",
+    "layout",
+    "map",
+    "gis",
+    "webgis"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/isaacenage/maplibre-gl-layout-export.git"
+  },
+  "license": "MIT",
+  "author": "Isaac Enage"
+}
