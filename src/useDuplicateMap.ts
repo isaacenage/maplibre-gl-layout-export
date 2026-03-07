@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import maplibregl from 'maplibre-gl';
 import type { Map as MapLibreMap } from 'maplibre-gl';
 
 interface UseDuplicateMapOptions {
@@ -20,8 +21,6 @@ export function useDuplicateMap({ sourceMap, containerRef, focused, width, heigh
   useEffect(() => {
     if (!sourceMap || !containerRef.current || initRef.current) return;
     initRef.current = true;
-
-    const maplibregl = require('maplibre-gl');
 
     const style = sourceMap.getStyle();
     const center = sourceMap.getCenter();
