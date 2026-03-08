@@ -105,6 +105,10 @@
     "type": "git",
     "url": "https://github.com/isaacenage/maplibre-gl-layout-export.git"
   },
+  "homepage": "https://github.com/isaacenage/maplibre-gl-layout-export#readme",
+  "bugs": {
+    "url": "https://github.com/isaacenage/maplibre-gl-layout-export/issues"
+  },
   "license": "MIT",
   "author": "Isaac Enage"
 }

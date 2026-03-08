@@ -113,7 +113,7 @@ const PrintTextElement: React.FC<PrintTextElementProps> = ({
 
   useEffect(() => {
     if (editor && !editing && editor.getHTML() !== element.text) {
-      editor.commands.setContent(element.text, { emitUpdate: false });
+      editor.commands.setContent(element.text, false);
     }
   }, [element.text, editor, editing]);
 
