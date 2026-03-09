@@ -1,6 +1,6 @@
 {
   "name": "@isaacenage/maplibre-gl-layout-export",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "A powerful print layout and export plugin for MapLibre GL JS — drag-and-drop map frames, rich text, images, and export to PNG/PDF/SVG.",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
